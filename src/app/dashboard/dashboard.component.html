@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form >
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="boxOne" class="custm-bg1 h3">Box 1</label>
+                            <input type="text" name="boxOne" id="boxOne" class="form-control" [(ngModel)]="input1" (blur)="onvalueGiven()">
+                            <span class="text-danger" >
+                                <ng-container >{{error1}}</ng-container>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="boxTwo" class="h3 custm-bg2">Box 2</label>
+                            <input type="text" name="boxTwo" id="boxTwo" class="form-control" [(ngModel)]="input2" (blur)="onvalueGiven1()">
+                            <span class="text-danger">
+                                <ng-container ><ng-container >{{error2}}</ng-container></ng-container>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    <button class="btn-success btn btn-lg mt-4" (click)="create()"  [disabled]="!isError()">Create Chart</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-12">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
